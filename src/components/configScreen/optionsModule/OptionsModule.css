@@ -1,0 +1,42 @@
+:root {
+    --main-color-white: #ffffff;
+    --buttons-color: #bcced9;
+    --buttons-color-hover: #6594ba;
+    --buttons-color-selected: #304859;
+    --submit-button-color: #fba314;
+    --h2-color: #7191a5;
+}
+
+.options-styles {
+    margin: 0 5%;
+}
+
+.buttons-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 14px;
+    box-sizing: border-box;
+}
+
+.button-style {
+    width: 50%;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: var(--buttons-color);
+    color: var(--main-color-white);
+    font-size: 28px;
+}
+
+.button-style-selected {
+    width: 50%;
+    height: 65px;
+    cursor: pointer;
+    border-radius: 25px;
+    border-color: transparent;
+    background-color: var(--buttons-color-selected);
+    color: var(--main-color-white);
+    font-size: 28px;
+}

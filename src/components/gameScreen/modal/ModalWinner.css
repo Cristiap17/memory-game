@@ -1,0 +1,51 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-container section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #fba314;
+    border-radius: 12px;
+    position: relative;
+    left: 25%;
+    top: 30%;
+}
+
+.h2-modal {
+    color: white;
+    font-size: 28px;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.h3-modal {
+    color: white;
+    font-size: 18px;
+    padding: 2px;
+    text-align: center;
+    margin: 0;
+}
+
+.new-gameButton-modal {
+    width: 110px;
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #dfe6ec;
+    color: #6c8fa0;
+    margin: 12px 0
+}

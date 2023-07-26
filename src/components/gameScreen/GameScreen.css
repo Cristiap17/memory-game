@@ -1,0 +1,296 @@
+:root {
+    --main-color-white: #ffffff;
+    --buttons-color: #bcced9;
+    --buttons-color-hover: #6594ba;
+    --buttons-color-selected: #304859;
+    --submit-button-color: #fba314;
+    --h2-color: #7191a5;
+}
+
+
+.game-container {
+    background-color: white;
+    margin: 30px auto;
+    width: 70%;
+    height: 90vh;
+    border-radius: 8px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 0 auto;
+}
+
+.nav-title-class {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 42px;
+    padding-left: 42px;
+    color: rgba(23, 40, 56, 255);
+}
+
+
+.nav-title-class-6x6 {
+    font-size: 42px;
+    padding-left: 42px;
+    color: rgba(23, 40, 56, 255);
+    margin: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+    width: 30%;
+}
+
+.nav-buttons button {
+    width: 110px;
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-buttons button:nth-child(1) {
+    background-color: #fba314;
+    color: #dfe6ec;
+}
+
+.nav-buttons button:nth-child(2) {
+    background-color: #dfe6ec;
+    color: #6c8fa0;
+}
+
+.board-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.board-6x6 {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.item-board {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: #304859;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.item-board-6x6 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #304859;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.item-board.flipped {
+    transform: rotateY(180deg);
+    background-color: #fba314;
+}
+
+.item-board.flipped strong {
+    transform: rotateY(180deg);
+    font-size: 40px;
+    color: white;
+}
+
+.item-board-6x6.flipped {
+    transform: rotateY(180deg);
+    background-color: #fba314;
+}
+
+.item-board-6x6.flipped strong {
+    transform: rotateY(180deg);
+    font-size: 30px;
+    color: white;
+}
+
+.item-board.selected {
+    background-color: #bcceda;
+    font-size: 40px;
+    color: white;
+}
+
+.item-board-6x6.selected {
+    background-color: #bcceda;
+    font-size: 40px;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.players-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.section-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    gap: 32px;
+}
+
+.section-container div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    height: 50px;
+    background-color: #dfe6ec;
+    color: #6c8fa0;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 16px;
+    margin-top: 15px;
+}
+
+.section-container div p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+}
+
+
+/* MenuButton*/
+.menu-container {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.menu-container.open {
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    opacity: 1;
+    z-index: 1;
+    gap: 14px;
+}
+
+.menu-button {
+    width: 150px;
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #fba314;
+    color: #dfe6ec;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    background-color: white;
+    border-radius: 18px;
+}
+
+.submenu button {
+    width: 110px;
+    height: 48px;
+    cursor: pointer;
+    border: none;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.submenu button:nth-child(1) {
+    background-color: #fba314;
+    color: #dfe6ec;
+}
+
+.submenu button:nth-child(2) {
+    background-color: #dfe6ec;
+    color: #6c8fa0;
+}
+
+.menu-container.open .submenu {
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    opacity: 1;
+    z-index: 1;
+    gap: 16px;
+}
+
+
+@media(max-width: 740px) {
+    .game-container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    .item-board {
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-board-6x6 {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-container {
+        height: 25%;
+    }
+
+    .menu-container {
+        display: block;
+    }
+}
