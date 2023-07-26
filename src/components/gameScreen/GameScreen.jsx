@@ -93,7 +93,7 @@ export default function GameScreen() {
         if (pairCheckedCount === renderItems.length / 2 && renderItems.length !== 0) {
             setShowClassModal(!showClassModal)
             playerWinner(numberPlayersSelected)
-            setPauseTime(!pauseTime)
+            setPauseTime(false)
         }
     }, [pairCheckedCount])
 
@@ -130,6 +130,7 @@ export default function GameScreen() {
                                 setCount(2)
                                 setPairCheckedCount(0)
                                 setIsOpen(!isOpen)
+                                setPauseTime(false)
                             }}> Restart </button>
                             <button onClick={() => {
                                 handleNewGame()

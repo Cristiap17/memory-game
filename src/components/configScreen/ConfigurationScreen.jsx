@@ -46,7 +46,7 @@ export default function ConfigurationScreen(){
     const buttonSelected = Object.values(buttonsTest).flat().filter((item) => item.active === true )
 
     const handleSubmit = () =>{
-        setPauseTime(!pauseTime)
+        setPauseTime(true)
         setShowClassScreens(!showclassScreens)
         setButtonsActive(buttonSelected)
         setRenderTimer(true)

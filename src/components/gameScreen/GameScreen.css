@@ -28,14 +28,14 @@
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 42px;
-    padding-left: 42px;
+    padding-left: 10px;
     color: rgba(23, 40, 56, 255);
 }
 
 
 .nav-title-class-6x6 {
     font-size: 42px;
-    padding-left: 42px;
+    padding-left: 10px;
     color: rgba(23, 40, 56, 255);
     margin: 0;
 }
@@ -83,7 +83,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
+    gap: 10px;
 }
 
 .item-board {
@@ -196,7 +196,7 @@
     display: none;
     position: absolute;
     top: 40px;
-    right: 60px;
+    right: 40px;
     padding: 10px;
     border-radius: 5px;
     overflow: hidden;
@@ -213,7 +213,7 @@
 }
 
 .menu-button {
-    width: 150px;
+    width: 120px;
     height: 48px;
     cursor: pointer;
     border: none;
@@ -235,7 +235,7 @@
 }
 
 .submenu button {
-    width: 110px;
+    width: 90px;
     height: 48px;
     cursor: pointer;
     border: none;
@@ -257,14 +257,14 @@
 .menu-container.open .submenu {
     display: flex;
     flex-direction: column;
-    height: 30%;
+    height: 25%;
     opacity: 1;
     z-index: 1;
     gap: 16px;
 }
 
 
-@media(max-width: 740px) {
+@media(max-width: 640px) {
     .game-container {
         width: 90%;
         display: flex;
@@ -276,14 +276,18 @@
         display: none;
     }
 
+    .board-container {
+        padding: 18px;
+    }
+
     .item-board {
         width: 80px;
         height: 80px;
     }
 
     .item-board-6x6 {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     .footer-container {

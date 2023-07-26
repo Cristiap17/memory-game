@@ -74,3 +74,13 @@
     top: -10px;
     rotate: -45deg;
 }
+
+@media(max-width: 740px) {
+    .main-container {
+        width: 20%;
+    }
+
+    .main-container-turn {
+        width: 20%;
+    }
+}

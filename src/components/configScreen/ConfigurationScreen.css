@@ -78,8 +78,8 @@
     font-size: 28px;
 }
 
-@media(max-width: 740px) {
+@media(max-width: 640px) {
     .main-style {
-        width: 70%;
+        width: 90%;
     }
 }
