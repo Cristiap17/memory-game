@@ -257,7 +257,7 @@
 .menu-container.open .submenu {
     display: flex;
     flex-direction: column;
-    height: 25%;
+    height: 30%;
     opacity: 1;
     z-index: 1;
     gap: 16px;
@@ -267,6 +267,7 @@
 @media(max-width: 640px) {
     .game-container {
         width: 90%;
+        height: 85vh;
         display: flex;
         flex-direction: column;
         gap: 16px;
@@ -281,8 +282,8 @@
     }
 
     .item-board {
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
     }
 
     .item-board-6x6 {
@@ -291,7 +292,11 @@
     }
 
     .footer-container {
-        height: 25%;
+        height: 15%;
+    }
+
+    .section-container {
+        width: 80%;
     }
 
     .menu-container {
