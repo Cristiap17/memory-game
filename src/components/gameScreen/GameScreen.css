@@ -267,7 +267,7 @@
 @media(max-width: 640px) {
     .game-container {
         width: 90%;
-        height: 85vh;
+        height: 84vh;
         display: flex;
         flex-direction: column;
         gap: 16px;

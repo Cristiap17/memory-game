@@ -11,7 +11,7 @@ export default function Timer() {
             timer = setTimeout(() => setSecond(second + 1), 1000)
         }
         return () => clearTimeout(timer)
-    }, [pauseTime ? second : ''])
+    }, [/* pauseTime ? second : '' */])
 
     const minutes = Math.floor(second / 60)
     const formatSeconds = second % 60

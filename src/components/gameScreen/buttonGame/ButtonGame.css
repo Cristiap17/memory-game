@@ -7,3 +7,12 @@
     width: 40px;
     height: 40px;
 }
+
+.disable {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    z-index: 999;
+}

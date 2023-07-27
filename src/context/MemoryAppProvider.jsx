@@ -24,7 +24,7 @@ export const MemoryAppProvider = ({children}) => {
     const [showclassScreens, setShowClassScreens] = useState(true)
     const [showClassModal, setShowClassModal] = useState(false)
     const [playersPoints, setPlayersPoints] = useState([])
-
+    const [buttonsDisabled, setButtonsDisabled] = useState([])
 
 
     const boardCards = (arrayCards) =>{
@@ -32,6 +32,7 @@ export const MemoryAppProvider = ({children}) => {
           ...card, 
           isSelected: false,
           checkPair: false,
+          disable: false,
         }))
         setRenderItems([...arrayCardsMapped])
     }
@@ -41,7 +42,8 @@ export const MemoryAppProvider = ({children}) => {
           if (index === cardIndex) {
             return {
               ...item,
-              isSelected: true
+              isSelected: true,
+              disable: true
             }
           }
           return item
@@ -51,10 +53,27 @@ export const MemoryAppProvider = ({children}) => {
 
     const flippedInvalidPair = () =>{
       const cardsSelected = renderItems.map((item)=>{
-        return {
-         ...item,
-         isSelected: false 
+        if (item.checkPair === false) {
+          return {
+           ...item,
+           isSelected: false, 
+           disable: false 
+          }
         }
+        return item
+      })
+      setRenderItems(cardsSelected)
+    }
+
+    const disabledCards = () =>{
+      const cardsSelected = renderItems.map((item)=>{
+        if (item.isSelected !== true) {
+          return{
+            ...item,
+            disable: true,
+          }
+        }
+        return item
       })
       setRenderItems(cardsSelected)
     }
@@ -66,6 +85,7 @@ export const MemoryAppProvider = ({children}) => {
            ...item,
            isSelected: false,
            checkPair: true ,
+           disable: true
           }
         }
         return item
@@ -168,7 +188,9 @@ export const MemoryAppProvider = ({children}) => {
         ,playerTurn,
         pointsPlayers, setPoinstPlayers, playerPoints,
         showclassScreens, setShowClassScreens,
-        showClassModal, setShowClassModal 
+        showClassModal, setShowClassModal,
+        disabledCards,
+        buttonsDisabled, setButtonsDisabled 
       }
       }>
         {children}

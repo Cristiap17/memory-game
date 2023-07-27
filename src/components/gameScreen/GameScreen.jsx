@@ -28,7 +28,8 @@ export default function GameScreen() {
         showclassScreens, setShowClassScreens,
         showClassModal, setShowClassModal,
         setSecond,
-        pauseTime, setPauseTime
+        setPauseTime,
+        disabledCards,
     } = useContext(MemoryContext)
 
     const [move, setMove] = useState(0)
@@ -43,19 +44,19 @@ export default function GameScreen() {
         setClassActive('flipped')
         setTurn(turn + 1)
     }
-
+    
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
     const validationPair = () => {
+        
         if (pairCards[0] === pairCards[1]) {
             flippedCheckedPair(pairCards[0])
             setPairCards([])
             setTurn(0)
             playerPoints(true)
             setPairCheckedCount(pairCheckedCount + 1)
-
             return
         }
         if (count >= numberPlayersSelected.length) {
@@ -83,6 +84,7 @@ export default function GameScreen() {
 
     useEffect(() => {
         if (turn === 2) {
+            disabledCards()
             setTimeout(() => {
                 validationPair()
             }, 1000)
@@ -149,6 +151,7 @@ export default function GameScreen() {
                                     flipItem={flipItem}
                                     classActive={classActive}
                                     isSelected={item.isSelected}
+                                    disable={item.disable}
                                     checkPair={item.checkPair}
                                     key={index}
                                     value={item.value}
