@@ -10,7 +10,6 @@ function App() {
     <MemoryAppProvider>
       <ConfigurationScreen/>
       <GameScreen/>
-      <LockOrientationScreen/>
     </MemoryAppProvider>
   )
 }
