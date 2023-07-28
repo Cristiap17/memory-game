@@ -119,7 +119,7 @@
 
 .item-board.flipped strong {
     transform: rotateY(180deg);
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 
@@ -136,13 +136,13 @@
 
 .item-board.selected {
     background-color: #bcceda;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 
 .item-board-6x6.selected {
     background-color: #bcceda;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
 }
 
