@@ -83,15 +83,15 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    gap: 12px;
 }
 
 .item-board {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: #304859;
     border-radius: 50%;
     transition: transform 0.5s;
@@ -103,8 +103,8 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: #304859;
     border-radius: 50%;
     transition: transform 0.5s;
