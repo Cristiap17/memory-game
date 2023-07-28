@@ -38,19 +38,21 @@ export default function GameScreen() {
     const [pairCheckedCount, setPairCheckedCount] = useState(0)
     const [winner, setWinner] = useState([])
     const [isOpen, setIsOpen] = useState(false);
+    const [disableButtonsMenu, setDisableButtonsMenu] = useState(true)
 
     const flipItem = () => {
         setMove(move + 1)
         setClassActive('flipped')
         setTurn(turn + 1)
     }
-    
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+        setDisableButtonsMenu(false)
     };
 
     const validationPair = () => {
-        
+
         if (pairCards[0] === pairCards[1]) {
             flippedCheckedPair(pairCards[0])
             setPairCards([])
@@ -126,18 +128,23 @@ export default function GameScreen() {
                     <div className={`menu-container ${isOpen ? 'open' : ''}`}>
                         <button className={'menu-button'} onClick={toggleMenu}>Menú</button>
                         <div className="submenu">
-                            <button onClick={() => {
-                                handleRestartBoard()
-                                setMove(0)
-                                setCount(2)
-                                setPairCheckedCount(0)
-                                setIsOpen(!isOpen)
-                                setPauseTime(false)
-                            }}> Restart </button>
-                            <button onClick={() => {
-                                handleNewGame()
-                                setIsOpen(!isOpen)
-                            }}>New Game</button>
+                            <button
+                                disabled={disableButtonsMenu}
+                                onClick={() => {
+                                    handleRestartBoard()
+                                    setMove(0)
+                                    setCount(2)
+                                    setPairCheckedCount(0)
+                                    setIsOpen(!isOpen)
+                                    setDisableButtonsMenu(true)
+                                }}> Restart </button>
+                            <button
+                                disabled={disableButtonsMenu}
+                                onClick={() => {
+                                    handleNewGame()
+                                    setIsOpen(!isOpen)
+                                    setDisableButtonsMenu(true)
+                                }}>New Game</button>
                         </div>
                     </div>
                 </nav>
