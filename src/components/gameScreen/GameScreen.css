@@ -83,7 +83,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
+    gap: 10px;
 }
 
 .item-board {
@@ -266,7 +266,7 @@
 
 @media(max-width: 640px) {
     .game-container {
-        width: 90%;
+        width: 95%;
         height: 84vh;
         display: flex;
         flex-direction: column;
