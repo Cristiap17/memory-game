@@ -49,3 +49,10 @@
     color: #6c8fa0;
     margin: 12px 0
 }
+
+@media(max-width: 640px) {
+    .modal-container section {
+        width: 70%;
+        left: 15%;
+    }
+}
