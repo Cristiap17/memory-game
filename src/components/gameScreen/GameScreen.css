@@ -83,7 +83,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    gap: 8px;
 }
 
 .item-board {
